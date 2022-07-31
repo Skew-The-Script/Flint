@@ -1,7 +1,7 @@
 let MAP;
 let MAPLOC = { lat: 43.0202, lng: -83.6935 };
-let MAPADDRESS = "E SECOND AVE";
-let MAPLEAD = 1;
+let MAPADDRESS;
+let MAPLEAD;
 let coordData, leadData, addressData;
 let numCoords, numLead, numAddress;
 
@@ -9,17 +9,9 @@ let launched = false;
 
 // GET HTML ELEMENTS
 let addressLabel = document.getElementById("addressLabel");
-// let addressLabelContainer = document.getElementById("addressLabelContainer");
-let leadLabel = document.getElementById("leadLabel");
-// let leadLabelContainer = document.getElementById("leadLabelContainer");
-
+let leadLabel1 = document.getElementById("leadLabel1");
+let leadLabel2 = document.getElementById("leadLabel2");
 let results = document.getElementById("results");
-
-$('.start-button').on('click', function(){start();});
-function start(){
-    fullpage_api.moveSectionDown();
-}
-
 
 // get data
 
@@ -91,14 +83,10 @@ $('.load-map').on('click',function(){
 
 function getNewAddress(){
 
-
     if (!launched){
         launched = true;
-        // leadLabel.style.display = "block";
-        // addressLabel.style.display = "block";
         results.style.display = "block";
     }
-
 
     let leadidx = Math.round(Math.random()*numLead);
 
@@ -121,10 +109,11 @@ function getNewAddress(){
 
     addressLabel.innerText = "Address: " + MAPADDRESS;
     let leadAnswer = MAPLEAD ? "  Yes" : "  No";
-    leadLabel.innerText = "Showed prominent lead levels?   " + leadAnswer;
+    leadLabel1.innerText = "Showed prominent lead levels?   ";
+    leadLabel2.innerText = leadAnswer;
 
     MAP = new google.maps.Map(document.getElementById("map"), {
-        zoom: 16,
+        zoom: 12,
         center: MAPLOC,
     });
     const marker = new google.maps.Marker({
@@ -139,13 +128,6 @@ function initMap() {
         zoom: 12,
         center: MAPLOC,
     });
-    // const marker = new google.maps.Marker({
-    //     position: MAPLOC,
-    //     map: MAP,
-    // });
 }
 
 window.initMap = initMap;
-
-console.log("$");
-console.log(launched);

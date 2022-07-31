@@ -97,10 +97,10 @@ body{
 
 }
 
-.credits p{
-    -webkit-text-stroke-width:1px;
-    -webkit-text-fill-color:white;
-    font-size: 15px;
+.credits {
+    /*-webkit-text-stroke-width:1px;*/
+    /*-webkit-text-fill-color:white;*/
+    font-size: 10px;
 }
 
 .top-part {
@@ -181,5 +181,9 @@ button {
 
 #citation{
     font-size: 12px;
+}
+
+#leadLabel2{
+    font-weight: bold;
 }
 
