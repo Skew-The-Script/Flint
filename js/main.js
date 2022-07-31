@@ -1,6 +1,6 @@
 let MAP;
 let MAPPINCOORD;
-let MAPLOC = { lat: 43.0202, lng: -83.6935 };
+let INITMAPLOC = { lat: 43.0202, lng: -83.6935 };
 let MAPADDRESS;
 let MAPLEAD;
 let coordData, leadData, addressData;
@@ -114,8 +114,8 @@ function getNewAddress(){
     leadLabel2.innerText = leadAnswer;
 
     MAP = new google.maps.Map(document.getElementById("map"), {
-        zoom: 12,
-        center: MAPLOC,
+        zoom: 13,
+        center: MAPPINCOORD,
     });
     const marker = new google.maps.Marker({
         position: MAPPINCOORD,
@@ -126,8 +126,8 @@ function getNewAddress(){
 
 function initMap() {
     MAP = new google.maps.Map(document.getElementById("map"), {
-        zoom: 12,
-        center: MAPLOC,
+        zoom: 13,
+        center: INITMAPLOC,
     });
 }
 

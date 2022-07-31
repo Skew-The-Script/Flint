@@ -165,12 +165,16 @@ button {
 
 #addressLabel {
     height: 50px;
-    font-size: 18px;
+    font-size: 20px;
 }
 
-#leadLabel {
+#leadLabel1 {
     height: 50px;
-    font-size: 18px;
+    font-size: 20px;
+}
+#leadLabel2 {
+    height: 50px;
+    font-size: 20px;
 }
 
 
