@@ -1,4 +1,5 @@
 let MAP;
+let MAPPINCOORD;
 let MAPLOC = { lat: 43.0202, lng: -83.6935 };
 let MAPADDRESS;
 let MAPLEAD;
@@ -103,7 +104,7 @@ function getNewAddress(){
     // get lat/lon based on pid
     for (let i = 0; i < numCoords; i++){
         if (coordData[i]['pid'] == pid){
-            MAPLOC = { lat: coordData[i]['lat'], lng: coordData[i]['lon'] };
+            MAPPINCOORD = { lat: coordData[i]['lat'], lng: coordData[i]['lon'] };
         }
     }
 
@@ -117,7 +118,7 @@ function getNewAddress(){
         center: MAPLOC,
     });
     const marker = new google.maps.Marker({
-        position: MAPLOC,
+        position: MAPPINCOORD,
         map: MAP,
     });
 }
