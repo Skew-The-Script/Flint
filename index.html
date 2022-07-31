@@ -33,35 +33,12 @@
 
                                 <div class="row d-flex align-items-center">
                                     <div class="col-12">
-                                        <br>
-                                        <br>
                                         <h2>FLINT, MICHIGAN</h2>
+                                        <br><br><br><br><br><br>
                                     </div>
                                 </div>
 
 
-                                <div class="row d-flex align-items-center">
-                                    <div class="col-12">
-                                        <br>
-                                        <br>
-                                        <p>How prevalent is lead in Flint's water system?</p>
-                                        <br>
-                                        <br>
-                                    </div>
-                                </div>
-
-
-                                <div class="row d-flex align-items-center">
-                                    <div class="col-3 justify-content-center">
-                                    </div>
-                                    <div id = "loadingDiv" class="col-6 justify-content-center" style="display:none;">
-                                        <img id = "loading" src="gifs/loading_transparent.gif" style="width:100%">
-                                    </div>
-                                    <div class="col-3 justify-content-center">
-                                    </div>
-                                </div>
-
-                                <!--                                    BUTTONS-->
                                 <div id="startButtons" class="row" style="display: block">
                                     <div class="row" style="display: block; text-align:center">
                                         <div class="buttons">
@@ -69,6 +46,27 @@
                                         </div>
                                     </div>
                                 </div>
+
+
+                                <div class="row d-flex align-items-center">
+                                    <div class="col-12">
+                                        <br><br><br><br><br><br><br><br>
+                                        <p>How prevalent is lead in Flint's water system?</p>
+                                    </div>
+                                </div>
+
+
+<!--                                <div class="row d-flex align-items-center">-->
+<!--                                    <div class="col-3 justify-content-center">-->
+<!--                                    </div>-->
+<!--                                    <div id = "loadingDiv" class="col-6 justify-content-center" style="display:none;">-->
+<!--                                        <img id = "loading" src="gifs/loading_transparent.gif" style="width:100%">-->
+<!--                                    </div>-->
+<!--                                    <div class="col-3 justify-content-center">-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+
                             </div>
 
 
@@ -79,11 +77,6 @@
                                     &nbsp; &nbsp; Applet by &nbsp;
                                     <a href="https://skewthescript.org/">Skew The Script</a>
                                     (authors: Max Cembalest and Dashiell Young-Saver)
-                                </div>
-                                <div class="row credits">
-<!--                                    &nbsp; &nbsp; Applet inspired by &nbsp;-->
-<!--                                    <a href="https://onlinestatbook.com/stat_sim/sampling_dist/">this sampling distribution applet</a>-->
-<!--                                    &nbsp; (by David Lane & fellow contributors)-->
                                 </div>
                                 <div class="row credits">
                                     &nbsp; &nbsp; Background image by Carlos Osorio, Associated Press
@@ -103,32 +96,16 @@
                         <div class="col-12 align-self-center">
                             <div class="row d-flex justify-content-center">
 
-                        <!--                LEFT COLUMN: TEXT, PICTURES, AND BUTTONS:-->
                                 <div class = "col-4 container align-self-center">
 
-                                    <div class="row d-flex justify-content-center" style="border: thin solid grey; border-radius: 5px; background-color: #dcdcdc">
+                                    <div class="row d-flex justify-content-center">
                                         <div class="col">
-                                            <div class="row d-flex justify-content-center">
-                                                In 2015, a team of Virginia Tech researchers estimated the proportion of homes in Flint with dangerous pipes.
+                                                In 2015, a team of Virginia Tech researchers * estimated the proportion of homes in Flint with dangerous pipes.
 
                                                 They randomly sampled homes from the city, inspecting the water for lead contamination.
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row d-flex justify-content-center" style="border: thin solid grey; border-radius: 5px; background-color: #dcdcdc">
-                                        <div class="col">
-                                            <div id="addressLabel" class="row d-flex justify-content-center">
-                                                Address: E SECOND AVE
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row d-flex justify-content-center" style="border: thin solid grey; border-radius: 5px; background-color: #dcdcdc">
-                                        <div class="col">
-                                            <div id="leadLabel" class="row d-flex justify-content-center">
-                                                Lead
-                                            </div>
+                                                <br><br>
+                                                Click the button below to sample a random home from a comprehensive Flint lead pipe database  **
+                                                <br> <br>
                                         </div>
                                     </div>
 
@@ -142,6 +119,48 @@
                                             </div>
                                         </div>
                                     </div>
+
+                                    <div style="height: 200px">
+                                        <div id="results" style="display: none">
+                                            <div id="addressLabelContainer" class="row d-flex justify-content-center" style="display: none">
+                                                <div class="col">
+                                                    <div id="addressLabel" class="row d-flex justify-content-center"  style="display: none; border: thin solid grey; border-radius: 5px; background-color: #dcdcdc">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div id="leadLabelContainer" class="row d-flex justify-content-center" style="display: none">
+                                                <div class="col">
+                                                    <div id="leadLabel" class="row d-flex justify-content-center" style="display: none; border: thin solid grey; border-radius: 5px; background-color: #dcdcdc">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+
+                                    <div class="row d-flex justify-content-center">
+                                        <div id="disclaimer">
+                                            * Edwards, M., et al. <a href="http://flintwaterstudy.org/information-for-flint-residents/results-for-citizen-testing-for-lead-300-kits/">Virginia Tech’s Flint Water Study</a> (published Sept. 2015, accessed July 2020)
+                                            <br><br>
+                                            ** <a href="https://flintpipemap.org/map">This database</a> was painstakingly compiled by BlueConduit in the years following the outbreak of the Flint water crisis.
+                                            At the time of the Virginia Tech study, researchers only had the time to do a random sample of
+                                            n = 252 homes in Flint. This activity is replicating the random sampling process of the researchers.
+                                        </div>
+                                        <br><br>
+                                    </div>
+
+<!--                                    <div class="row d-flex justify-content-center">-->
+<!--                                        <div id="citation">-->
+<!--                                            -->
+<!--                                            -->
+<!--                                        </div>-->
+<!--                                    </div>-->
                                 </div>
 
                                 <div class = "col-1 container align-self-center"></div>

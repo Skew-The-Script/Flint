@@ -5,9 +5,21 @@ let MAPLEAD = 1;
 let coordData, leadData, addressData;
 let numCoords, numLead, numAddress;
 
+let launched = false;
+
 // GET HTML ELEMENTS
 let addressLabel = document.getElementById("addressLabel");
+// let addressLabelContainer = document.getElementById("addressLabelContainer");
 let leadLabel = document.getElementById("leadLabel");
+// let leadLabelContainer = document.getElementById("leadLabelContainer");
+
+let results = document.getElementById("results");
+
+$('.start-button').on('click', function(){start();});
+function start(){
+    fullpage_api.moveSectionDown();
+}
+
 
 // get data
 
@@ -78,6 +90,16 @@ $('.load-map').on('click',function(){
 
 
 function getNewAddress(){
+
+
+    if (!launched){
+        launched = true;
+        // leadLabel.style.display = "block";
+        // addressLabel.style.display = "block";
+        results.style.display = "block";
+    }
+
+
     let leadidx = Math.round(Math.random()*numLead);
 
     MAPLEAD = leadData[leadidx]['lead'] == 1;
@@ -98,7 +120,8 @@ function getNewAddress(){
     }
 
     addressLabel.innerText = "Address: " + MAPADDRESS;
-    leadLabel.innerText = MAPLEAD ? "Lead" : "No Lead";
+    let leadAnswer = MAPLEAD ? "  Yes" : "  No";
+    leadLabel.innerText = "Showed prominent lead levels?   " + leadAnswer;
 
     MAP = new google.maps.Map(document.getElementById("map"), {
         zoom: 16,
@@ -108,19 +131,21 @@ function getNewAddress(){
         position: MAPLOC,
         map: MAP,
     });
-
 }
 
 
 function initMap() {
     MAP = new google.maps.Map(document.getElementById("map"), {
-        zoom: 16,
+        zoom: 12,
         center: MAPLOC,
     });
-    const marker = new google.maps.Marker({
-        position: MAPLOC,
-        map: MAP,
-    });
+    // const marker = new google.maps.Marker({
+    //     position: MAPLOC,
+    //     map: MAP,
+    // });
 }
 
 window.initMap = initMap;
+
+console.log("$");
+console.log(launched);
