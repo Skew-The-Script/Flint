@@ -126,7 +126,7 @@ function getNewAddress(){
 
 function initMap() {
     MAP = new google.maps.Map(document.getElementById("map"), {
-        zoom: 13,
+        zoom: 12,
         center: INITMAPLOC,
     });
 }
